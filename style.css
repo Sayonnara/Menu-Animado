@@ -1,0 +1,115 @@
+
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --text-color : #ffff;
+    --text-secondary-color:#000f1f;
+    --background-color: #34495e;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--text-color);
+    transition: all background-color 0.9s ease;  
+}
+
+.menu-lateral{
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color:var(--background-color);
+    z-index: 5;
+    box-shadow:  0 0 20px #ffff;
+    transition:  left 0.3s ease;
+
+}
+
+.menu-lateral.ativo{
+    left: 0;
+    transition:  left 0.9s ease;
+}
+
+.menu-lateral ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+}
+
+.menu-lateral ul li {
+    padding: 15px 30px;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.menu-lateral ul li a i {
+    font-size: 24px;
+}
+
+.menu-lateral ul li:hover{
+    background-color: var(--primary-color) ;
+}
+
+.botao-menu{
+    background-color: var(--primary-color);
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 6;
+    border-radius: 5px;
+    font-size: 24px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.botao-menu.ativo{
+    left: 320px;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: left 0.9s ease;
+}
+
+.conteudo{
+    margin-left: 80px;
+    padding: 48px;
+    color: var(--text-secondary-color);
+    background-color: #ecf0f1;
+    transition:  0.9s ease;
+    
+}
+
+.conteudo.ativo{
+    margin: 320px;
+    background-color: var(--background-color);
+
+}
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+}
+
+.background.ativo{
+    opacity:1;
+    visibility: visible;
+}
